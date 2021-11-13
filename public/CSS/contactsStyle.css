@@ -1,0 +1,40 @@
+body{
+    background-color:  rgb(226, 223, 223);
+    height: 100vh;
+    width: 90vw;
+}
+
+footer{
+    text-align: center;
+}
+ 
+#formId{
+    text-align: center;
+}
+
+#getMessagesbtn{
+    background-color: rgb(192, 192, 243);
+    font-size: 120%;
+    margin-left: 34%;
+    height: 10vh;
+    width: 30%;
+    border-radius: 10vh;
+
+}
+
+#sendBtn{
+    background-color: rgb(192, 192, 243);
+    font-size: 120%;
+    margin-right: 2%;
+    height: 10vh;
+    width: 30%;
+    border-radius: 10vh;
+}
+
+.inputClass{
+    background-color: rgb(194, 194, 194);
+    border-radius: 5vh;
+    height: 10vh;
+    width: 60%;
+}
+

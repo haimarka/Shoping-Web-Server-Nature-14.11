@@ -1,0 +1,197 @@
+body{
+    background-color:  rgb(226, 223, 223);
+}
+
+#logo{
+    position: absolute;
+    z-index: 1;
+    top: 4%;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.iconContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 98%;
+    position: fixed;
+    font-size: 6vh;
+    
+    
+}
+
+
+#iconCounter{
+    display: flex;
+    border-radius: 50%;
+    position: fixed;
+    background-color: rgb(103, 103, 241);
+    width: 1.5%;
+    height: 3%;
+    margin-top: 0.3%;
+    margin-right: -0.5%;
+    font-size: 40%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+#diva {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#divs{
+    padding: 3vh;
+    margin: 3vh;
+    height: 60vh;
+    width: 28%;
+    box-shadow: 5px 5px 20px grey;
+    overflow: hidden;
+}
+
+
+
+
+.pics{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    
+    
+}
+
+.a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.b{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    
+}
+
+.b:hover{
+    opacity: 0;
+}
+
+
+.Description{
+    margin-left: -2%;
+    text-align: center;
+    transition: 1s;
+}
+
+
+.Description:hover{
+    background-color:  rgb(216, 252, 162);
+    padding: 3%;
+    height: auto;
+    width: 30vw;
+    border-radius: 20%;
+    /* transform:scale(110%); */
+    transition: 0.9s;
+    z-index: 2;
+    position: absolute;
+    
+    
+   
+}
+
+button{
+    opacity: 0.8;
+    width: 50%;
+}
+
+h4{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+a{
+    text-decoration: none;
+
+}
+
+@media screen and (max-width:1024px){
+    body{
+        background-color:  rgb(226, 223, 223);
+    }
+
+    #iconCounter{
+        width: 2%;
+    }
+
+ 
+}
+
+@media screen and (max-width:768px){
+    body{
+        background-color:  rgb(226, 223, 223);
+    }
+
+    #iconCounter{
+        width: 2.5%;
+    }
+
+    #divs{
+        padding: 3vh;
+        margin: 4vh;
+        height: 60vh;
+        width: 43%;
+        box-shadow: 5px 5px 20px grey;
+        overflow: hidden;
+    }
+}
+
+
+
+@media screen and (max-width:426px){
+    body{
+        background-color:  rgb(226, 223, 223);
+    }
+
+    .iconContainer{
+        width: 93%;
+    }
+
+    #iconCounter{
+        width: 4%;
+    }
+
+ 
+
+
+
+    #divs{
+        padding: 3vh;
+        margin: 4vh;
+        height: 40vh;
+        width: 70vw;
+        box-shadow: 5px 5px 20px grey;
+        overflow: hidden;
+    }
+
+    .Description:hover{
+        width: 60vw;
+    }
+
+ 
+    
+}
+
+
+

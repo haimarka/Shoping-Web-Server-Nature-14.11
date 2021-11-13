@@ -1,0 +1,37 @@
+GET http://localhost:8080/prodacts/
+
+###
+
+GET http://localhost:8080/prodacts/618971713b6543e6b415093a
+
+
+###
+
+POST http://localhost:8080/prodacts
+Content-Type: application/json
+
+{
+    "name": "haim",
+    "price": 444,
+    "Description": "big",
+    "Categories": "person",
+    "imgArray": "false"
+}
+
+###
+
+DELETE http://localhost:8080/prodacts/6184db596bdd108b9c33d203
+
+###
+
+PATCH http://localhost:8080/prodacts/618971713b6543e6b415093a
+Content-Type: application/json
+
+{
+    "name": "jonatan",
+    "price": 444,
+    "Description": "brain",
+    "Categories": "persons",
+    "imgArray": "false"
+}
+

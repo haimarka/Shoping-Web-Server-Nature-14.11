@@ -1,0 +1,32 @@
+POST http://localhost:8080/carts/
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:8080/carts/
+
+
+###
+
+GET http://localhost:8080/carts/618e65f94333f29626a9188d
+
+###
+
+PATCH http://localhost:8080/carts/update/618e65f94333f29626a9188d
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "moshe",
+    "price": 3,
+    "categories": "big",
+    "imgArray": "https://pbs.twimg.com/media/ENdACknXYAAE609.jpg"
+}
+
+###
+
+PATCH  http://localhost:8080/carts/delete/618e65f94333f29626a9188d
+
+
+
