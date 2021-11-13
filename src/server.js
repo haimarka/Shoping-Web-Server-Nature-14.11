@@ -6,6 +6,7 @@ publicPath = path.join(__dirname,"..","public"),
 PORT = process.env.PORT || 8080,
 exportition = require("./functionsPage");
 // app.set("view engine","html")
+require("dotenv").config();
 app.use(express.json());
 app.use(express.static(publicPath));
 
