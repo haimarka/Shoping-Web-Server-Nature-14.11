@@ -65,7 +65,7 @@ axios
     ${element.Description}<br>
     ${element.Categories}<br>
     <button onclick="addToCart(${index})" style="background-color : greenyellow"class="btn">הוסף</button><br><br>
-    <button onclick="removeFromProdacts('${element._id}')" style="background-color : red"class="btn">הסר</button>
+    <button onclick="removeFromProdacts('${element._id}')" style="background-color : red"class="btn">הסר</button><br><br>
     </p>
     </div>` 
         
@@ -100,6 +100,21 @@ function removeFromProdacts(id){
             throw err
         })
 }
+
+
+// <button onclick="updateSingleProdact('${element._id}')" style="background-color : blue"class="btn">עדכן</button>
+
+// function updateSingleProdact(id){
+//     console.log(id);
+//     axios
+//     .patch(`/cactus/${id}`)
+//         .then((response)=>{
+//             console.log(response);
+//         })
+//         .catch((err)=>{
+//             throw err
+//         })
+// }
 
 // axios
 // .get("/cactus")

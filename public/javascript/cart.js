@@ -89,7 +89,7 @@
 //     }
 // }
 // console.log(cartArray);
-    
+        let sum = 0;
         let userCart;
         axios
         .get("/carts")
@@ -97,6 +97,7 @@
             userCart = response.data[0].cart;
             console.log(response);
             userCart.forEach((element,index) => {
+                sum += element.price;            
                 divim.innerHTML += `
                 <div class="trClass">
                 <table>
@@ -112,20 +113,21 @@
                     <td>${element.id}</td>
                         <td></td>
                         <td>${element.name}</td>
-                        <td>${element.price}</td>
+                        <td>${element.price}$</td>
                         <td>${element.Categories}</td>
                         <td><img style="height: 100px; width: 100px;" src="${element.imgArray}"></td>
                      </tr>
-            </table>
-            <button onclick="deleteCartsDocById(${index})" class="cartBtnDelate">Delate</button>
-            </div>`
-                
-            });
-            
-        })
-        .catch((err)=>{
-            throw err
-        })
+                     </table>
+                     <button onclick="deleteCartsDocById(${index})" class="cartBtnDelate">Delate</button>
+                     </div>`
+                    });
+                    
+                    totalP.innerHTML += `total price : ${sum}$`
+                    console.log(sum);
+                })
+                .catch((err)=>{
+                    throw err
+                })
         
 
         function deleteCartsDocById(i){

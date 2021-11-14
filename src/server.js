@@ -1,12 +1,11 @@
 console.log("app is loading");
+require("dotenv").config();
 const express = require("express"),
 app = express(),
 path = require("path"),
 publicPath = path.join(__dirname,"..","public"),
 PORT = process.env.PORT || 8080,
 exportition = require("./functionsPage");
-// app.set("view engine","html")
-require("dotenv").config();
 app.use(express.json());
 app.use(express.static(publicPath));
 
@@ -42,6 +41,7 @@ app.get("/flowers",(req,res)=>{
 app.delete("/flowers/:id",(req,res)=>{
     exportition.deleteDocById(req,res)
 });
+
 
 app.get("/cactus",(req,res)=>{
     exportition.getCactusCtegorey(req,res)

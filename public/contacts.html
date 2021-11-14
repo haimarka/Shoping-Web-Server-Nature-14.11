@@ -113,7 +113,8 @@
         .get("/contacts")
         .then((response)=>{
           for (const iterator of response.data) {
-            document.getElementById("contactsMessages").innerHTML += `<p>name: ${iterator.name}</p>
+            document.getElementById("contactsMessages").innerHTML += `
+            <p>name: ${iterator.name}</p>
             <p>last name: ${iterator.lastName}</p>
             <p>message: ${iterator.message}</p>`
           } 

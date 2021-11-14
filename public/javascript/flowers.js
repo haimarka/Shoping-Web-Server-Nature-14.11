@@ -44,6 +44,8 @@
 // }
 
 // console.log(cartArray);
+
+
 let flowers;
 axios
 .get("/flowers")
@@ -63,12 +65,12 @@ axios
     ${element.Description}<br>
     ${element.Categories}<br>
     <button onclick="addToCart(${index})" style="background-color : greenyellow"class="btn">הוסף</button><br><br>
-    <button onclick="removeFromProdacts('${element._id}')" style="background-color : red"class="btn">הסר</button>
+    <button onclick="removeFromProdacts('${element._id}')" style="background-color : red"class="btn">הסר</button><br><br>
+    <a href="../update_page.html"><button onclick="updateSingleDocument('${element._id}')" class="btn" type="submit" style="background-color : blue">עדכן</button></a>
     </p>
     </div>`     
         
     });
-        // console.log(iterator);
     
     
 })
@@ -105,3 +107,9 @@ function removeFromProdacts(id){
             throw err
         })
 }
+
+function updateSingleDocument(id){
+    findAndUpdate(id)
+}
+
+

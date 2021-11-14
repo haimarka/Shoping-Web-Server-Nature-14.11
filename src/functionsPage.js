@@ -1,9 +1,11 @@
+// require("dotenv").config();
 const MongoDB = require("mongodb"),
     MongoClient = MongoDB.MongoClient,
     ObjectId = MongoDB.ObjectId,
-    MongoUrl = process.env.MONGOURL || "mongodb://localhost:27017/",
+    MongoUrl = process.env.MONGOURL || "/mongodb://localhost:27017/",
     dbName = "e-commerce",
     collectionName = "prodacts";
+
 
 function showDocsArray(req, res) {
     MongoClient.connect(MongoUrl)
@@ -133,6 +135,7 @@ function getCactusCtegorey(req, res) {
         .catch((err) => {
             throw err
         })
+    // console.log(MongoUrl);
 }
 
 function getMushroomCtegorey(req, res) {
@@ -191,7 +194,6 @@ function getCartById(req, res) {
             throw err
         })
 }
-
 
 function updateCartsDocById(req, res) {
     MongoClient.connect(MongoUrl).then((db) => {
